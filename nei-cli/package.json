@@ -1,23 +1,26 @@
 {
   "name": "nei-cli",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "nei cli tools for kaola",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "lint": "eslint *",
+    "lint:fix": "eslint --fix *"
   },
   "lint-staged": {
     "gitDir": "../",
     "linters": {
-      "nei-cli/**/*.js": [
+      "nei-cli/**/*": [
         "eslint --fix",
         "git add"
       ]
     }
   },
   "bin": {
-    "nei": "src/index.js"
+    "nei": "src/index.js",
+    "phantomjs": "node_modules/phantomjs-prebuilt/bin/phantomjs"
   },
   "author": "linxingjian",
   "license": "ISC",
@@ -28,12 +31,16 @@
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-react": "^7.4.0",
     "husky": "^0.14.3",
-    "lint-staged": "^4.3.0",
+    "lint-staged": "^4.3.0"
   },
   "dependencies": {
-    "update-notifier": "^2.3.0",
-    "yargs": "^9.0.1",
-    "rc": "^1.2.2",
     "chalklog": "^1.1.2",
+    "rc": "^1.2.2",
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2",
+    "shelljs": "^0.7.8",
+    "spooky": "^0.2.5",
+    "update-notifier": "^2.3.0",
+    "yargs": "^9.0.1"
   }
 }

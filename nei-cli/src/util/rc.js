@@ -1,7 +1,8 @@
 const rc = require('rc');
 
 const config = rc('nei', {
-  pageUrl: 'https://nei.netease.com/page/',
+  root: 'https://nei.netease.com/project/',
+  pageUrl: 'https://nei.netease.com/api/pages/',
   projectUrl: 'https://nei.netease.com/project/',
   interfaces: 'https://nei.netease.com/api/interfaces/',
   projectMap: {
