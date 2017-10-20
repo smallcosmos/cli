@@ -1,0 +1,33 @@
+{
+  "name": "nei-cli",
+  "version": "1.0.0",
+  "description": "nei cli tools for kaola",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "gitDir": "./",
+    "linters": {
+      "**/*.js": [
+        "eslint --fix",
+        "git add"
+      ]
+    }
+  },
+  "bin": {
+    "nei": "src/index.js"
+  },
+  "author": "linxingjian",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^4.9.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "husky": "^0.14.3"
+  },
+  "dependencies": {
+    "update-notifier": "^2.3.0",
+    "yargs": "^9.0.1"
+  }
+}
