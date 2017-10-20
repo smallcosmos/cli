@@ -8,9 +8,9 @@
     "precommit": "lint-staged"
   },
   "lint-staged": {
-    "gitDir": "./",
+    "gitDir": "../",
     "linters": {
-      "**/*.js": [
+      "nei-cli/**/*.js": [
         "eslint --fix",
         "git add"
       ]
@@ -24,10 +24,16 @@
   "devDependencies": {
     "eslint": "^4.9.0",
     "eslint-config-airbnb": "^16.1.0",
-    "husky": "^0.14.3"
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.4.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^4.3.0",
   },
   "dependencies": {
     "update-notifier": "^2.3.0",
-    "yargs": "^9.0.1"
+    "yargs": "^9.0.1",
+    "rc": "^1.2.2",
+    "chalklog": "^1.1.2",
   }
 }

@@ -1,5 +1,5 @@
 const Builder = require('../core/build');
-const chalk = require('chalk');
+const log = require('../util/log');
 
 exports.command = 'build [options]';
 
@@ -25,6 +25,6 @@ exports.handler = async (argv) => {
     const builder = new Builder(argv);
     builder.run();
   } catch (error) {
-    chalk.red(error);
+    log.red(error);
   }
 };
