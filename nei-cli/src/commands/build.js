@@ -18,6 +18,12 @@ exports.builder = {
     describe: 'filtered by id',
     type: 'string',
   },
+  V: {
+    alias: 'Verbose',
+    demand: false,
+    describe: 'to see all of the things Casper has to say',
+    type: 'boolean',
+  },
 };
 
 exports.handler = async (argv) => {

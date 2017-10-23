@@ -4,11 +4,12 @@ Pull json data from NEI, and auto create .json file
 
 ### 使用
 
-1. `npm install phantomjs-prebuilt -g`  
-2. `npm install nei-cli -g`  
-3. 在工程内创建.neirc，为了方便使用，尽量放在和.nekrc，moky.config.js等配置文件相同目录  
-4. `nei build -i [id]`，通过id拉取json数据  
-5. `nei build -t [tag]`, 通过标签拉取json数据
+1. `npm install phantomjs-prebuilt -g` 
+2. `npm install casperjs -g` 
+3. `npm install nei-cli -g`  
+4. 在工程内创建.neirc，为了方便使用，尽量放在和.nekrc，moky.config.js等配置文件相同目录  
+5. `nei build -i [id]`，通过id拉取json数据  
+6. `nei build -t [tag]`, 通过标签拉取json数据
 
 ### FAQ
 
