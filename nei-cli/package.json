@@ -33,14 +33,17 @@
     "lint-staged": "^4.3.0"
   },
   "dependencies": {
+    "casperjs": "^1.1.4",
     "chalklog": "^1.1.2",
     "cheerio": "^1.0.0-rc.2",
+    "jquery": "^3.2.1",
     "rc": "^1.2.2",
     "request": "^2.83.0",
     "request-promise": "^4.2.2",
     "shelljs": "^0.7.8",
     "spooky": "^0.2.5",
     "update-notifier": "^2.3.0",
+    "utils": "^0.3.1",
     "yargs": "^9.0.1"
   }
 }
