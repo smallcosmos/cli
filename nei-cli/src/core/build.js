@@ -5,6 +5,8 @@ const log = require('../util/log');
 const session = require('../util/session');
 const fs = require('fs');
 const shell = require('shelljs');
+const urlParser = require('url');
+const validUrl = require('valid-url');
 
 class Builder extends Events {
   constructor(options) {
@@ -31,7 +33,20 @@ class Builder extends Events {
   }
 
   _run() {
-    this.getAllInterface();
+    const { uri } = this.options;
+    if (uri) {
+      this.parseUrl(uri);
+    }
+    // this.getAllInterface();
+  }
+
+  parseUrl(uri) {
+    if (!validUrl.isUri(uri)) {
+      log.error('url invalid.');
+      process.exit(1);
+    }
+    const options = urlParser.parse(uri);
+    console.log(options);
   }
 
   initPid() {

@@ -5,7 +5,7 @@ const rc = require('../util/rc');
 const fs = require('fs');
 const path = require('path');
 
-const dir = path.join(__dirname, '../../session.json');
+const dir = path.join(__dirname, '../static/session.json');
 
 const format = (content) => {
   const s = new Set();

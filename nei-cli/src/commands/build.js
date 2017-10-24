@@ -24,6 +24,12 @@ exports.builder = {
     describe: 'to see all of the things Casper has to say',
     type: 'boolean',
   },
+  u: {
+    alias: 'uri',
+    demand: false,
+    describe: 'nei uri',
+    type: 'string',
+  },
 };
 
 exports.handler = async (argv) => {
